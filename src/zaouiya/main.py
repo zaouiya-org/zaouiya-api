@@ -4,7 +4,7 @@ from pydantic import ValidationError
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from mannara_api.schema import SeedCollection
+from zaouiya.schema import SeedCollection
 
 app = FastAPI()
 

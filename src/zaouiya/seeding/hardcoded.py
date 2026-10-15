@@ -1,3 +1,6 @@
+
+from zaouiya.bases import Model, DegreeProgramBase
+
 DEGREE_PROGRAMS = [
     {
         "name": "SCIENCES ET TECHNOLOGIES",

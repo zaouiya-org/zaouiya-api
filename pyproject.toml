@@ -1,7 +1,7 @@
 [project]
-name = "mannara-api"
+name = "zaouiya"
 version = "0.1.0"
-description = "API endpoints for data and workloads shared accross mannara projects "
+description = "API endpoints for data and workloads shared accross zaouiya projects "
 readme = "README.md"
 authors = [
     { name = "Azsu-rae", email = "aitameurmedilyas@gmail.com" }
@@ -10,11 +10,12 @@ requires-python = ">=3.14"
 dependencies = [
     "faker>=40.39.0",
     "fastapi[standard]>=0.141.1",
+    "polyfactory>=3.3.0",
     "sqlmodel>=0.0.48",
 ]
 
 [project.scripts]
-mannara-api = "mannara_api:main"
+zaouiya-api = "zaouiya:main"
 
 [build-system]
 requires = ["uv_build>=0.12.9,<0.13.0"]

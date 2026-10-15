@@ -1,5 +1,5 @@
 
-from scripts.hardcoded import SPECIALTIES, STUDENTS_DISTRIBUTION, SEMESTERS
+from zaouiya.seeding.hardcoded import SPECIALTIES, STUDENTS_DISTRIBUTION, SEMESTERS
 from scripts.generators import gen_students
 
 import json

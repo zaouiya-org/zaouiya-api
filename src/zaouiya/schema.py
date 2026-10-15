@@ -2,8 +2,6 @@
 
 from pydantic import BaseModel
 
-# from mannara_api.models import Model
-
 class Aggregator(BaseModel):
     model: str
     field: str
