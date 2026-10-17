@@ -14,35 +14,31 @@ DEGREE_PROGRAMS = [
     },
 ]
 
-STUDENTS_DISTRIBUTION = {
-    "ST": {
-        "academicLevels": [
-            {
-                "nb_sections": 3,
-                "nb_groups_per_section": 5,
-                "nb_students_per_group": 25,
-            },
-            {
-                "nb_sections": 2,
-                "nb_groups_per_section": 5,
-                "nb_students_per_group": 25,
-            },
-        ]
-    },
-    "I2A": {
-        "academicLevels": [
-            {
-                "nb_sections": 1,
-                "nb_groups_per_section": 5,
-                "nb_students_per_group": 25,
-            },
-            {
-                "nb_sections": 1,
-                "nb_groups_per_section": 4,
-                "nb_students_per_group": 25,
-            },
-        ]
-    },
+PEDAGOGICAL_STRUCTURE_CFG = {
+    "ST": [
+        {
+            "nb_sections_per_academicLevel": 3,
+            "nb_groups_per_section": 5,
+            "nb_students_per_group": 25,
+        },
+        {
+            "nb_sections_per_academicLevel": 2,
+            "nb_groups_per_section": 5,
+            "nb_students_per_group": 25,
+        },
+    ],
+    "I2A": [
+        {
+            "nb_sections_per_academicLevel": 1,
+            "nb_groups_per_section": 5,
+            "nb_students_per_group": 25,
+        },
+        {
+            "nb_sections_per_academicLevel": 1,
+            "nb_groups_per_section": 4,
+            "nb_students_per_group": 25,
+        },
+    ]
 }
 
 # specialty_acronyme -> array of semester objects

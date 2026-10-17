@@ -2,6 +2,8 @@
 
 from pydantic import BaseModel
 
+from zaouiya.bases import Model
+
 class Aggregator(BaseModel):
     model: str
     field: str
@@ -15,4 +17,4 @@ class Meta(BaseModel):
 
 class SeedCollection(BaseModel):
     meta: Meta
-    # data: list[Model] | dict[str, list[Model]]
+    data: list[Model] | dict[str, list[Model]]

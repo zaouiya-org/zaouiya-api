@@ -3,7 +3,6 @@ from sqlmodel import SQLModel
 
 # -------------- PEDAGOGICAL STRUCTURE --------------
 
-
 class StudentBase(SQLModel):
     surname: str
     name: str
@@ -12,8 +11,8 @@ class StudentBase(SQLModel):
 
 
 class GroupBase(SQLModel):
-    number: int
 
+    number: int
     students: list[StudentBase]
 
 
@@ -33,8 +32,6 @@ class DegreeProgramBase(SQLModel):
     name: str
     acronyme: str
     cycle: str
-
-    academicLevels: list[AcademicLevelBase]
 
 
 # -------------- ACADEMIC STRUCTURE --------------
@@ -85,14 +82,14 @@ class ProfessorBase(SQLModel):
     assistingCourses: list[CourseAssistantBase]
 
 
-Model = ( StudentBase
-         | GroupBase
-         | SectionBase
-         | AcademicLevelBase
-         | DegreeProgramBase
-         | CourseBase
-         | SemesterBase
-         | SemesterCoursesBase
-         | ProfessorBase
-         | CourseTeacherBase
-         | CourseAssistantBase )
+type Model = ( StudentBase
+              | GroupBase
+              | SectionBase
+              | AcademicLevelBase
+              | DegreeProgramBase
+              | CourseBase
+              | SemesterBase
+              | SemesterCoursesBase
+              | ProfessorBase
+              | CourseTeacherBase
+              | CourseAssistantBase )

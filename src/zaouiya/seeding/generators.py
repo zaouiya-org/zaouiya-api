@@ -3,18 +3,18 @@ import random
 
 from typing import Any
 
-from zaouiya.seeding.hardcoded import DEGREE_PROGRAMS, STUDENTS_DISTRIBUTION
+from zaouiya.seeding.hardcoded import DEGREE_PROGRAMS, PEDAGOGICAL_STRUCTURE_CFG
 
 import faker
 
 fake = faker.Faker("fr_DZ")
 
 
-def gen_matricule():
+def matricule():
     return str(random.randint(100_000_000_000, 999_999_999_999))
 
 
-def gen_phoneNumber():
+def phoneNumber():
     return (
         "0"
         + random.choice(["5", "6", "7"])
@@ -22,6 +22,7 @@ def gen_phoneNumber():
     )
 
 
-def gen_academicLevels(_name: str, values: dict[str, object], **_kwargs: dict[str, object]):
-    for i, al in enumerate(STUDENTS_DISTRIBUTION[values["cycle"]]["academicLevels"]):
-        pass
+def email(_name: str, values: dict[str, object], **_kwargs: dict[str, object]):
+    return str(values["name"]).lower() \
+            + "." + str(values["surname"]).lower() \
+            + "@example.com"
